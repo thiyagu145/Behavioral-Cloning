@@ -8,4 +8,9 @@ The dataset for the behavioral cloning project were obtained using the simulator
 Once that dataset was obtained using the simulator, the dataset can be visualized to understand how the images are fed to the model. Data augmentation is also done on random to reduced over-fitting. This is done by flipping the images in random. The original images along with their steering angles are in column 1 and flipped images along with their inverted steering angles are given in column 2 of the following image. 
 ![alt text](https://github.com/thiyagu145/Behavioral-Cloning/blob/master/Data%20Visualization.png)
 
+As a second augmentation step, the images from all three cameras namely left, right and center are also considered in random. While the image batches are created for training, the images are chosen in random among the three camera images. There is a correction factor added to the steering angles when the left and the right camera images are taken. A correction of +0.2 and -0.2 are added to the steering angles for the left and the right camera images respectively. This is done so that the model considers these images as images from the centre camera. A distribution of the camera angle values is given below. 
+
+![alt text](https://github.com/thiyagu145/Behavioral-Cloning/blob/master/Steering%20angles%20distribution.png)
+
+After the data is augmented, the images have to be pre-processed. The first pre-processing step used is to crop the images. From the visualization of the images we can see that the top and bottom part of the images are basically sky and the hood of the car respectively. The model does not need these information for determining the steering angle and hence these portions of the images can be discarded. Once the cropping is done, 
 
