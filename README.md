@@ -5,4 +5,7 @@ This repository contains the codes and the outputs for the Udacity Self driving 
 The dataset for the behavioral cloning project were obtained using the simulator provided by Udacity in the training mode. The images were considered as training inputs and the steering angles were considered as the output values. In this case, the deep learning network was trained for a regression purpose. The input to the model will be an image and the output will be the steering angle that has to be sent to the car to stay on the track provided. 
 
 ## Data Visualization and Pre-Processing
-Once that dataset was obtained using the simulator, the dataset can be visualized to understand how the images are fed to the model. 
+Once that dataset was obtained using the simulator, the dataset can be visualized to understand how the images are fed to the model. Data augmentation is also done on random to reduced over-fitting. This is done by flipping the images in random. The original images along with their steering angles are in column 1 and flipped images along with their inverted steering angles are given in column 2 of the following image. 
+![alt text](https://github.com/thiyagu145/Behavioral-Cloning/blob/master/Data%20Visualization.png)
+
+
